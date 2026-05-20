@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>True</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>\t</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>65001</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>title.akas.tsv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="titleId" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="ordering" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="title" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="region" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="language" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="types" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="attributes" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+            <Field name="isOriginalTitle" size="254" source="File: C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Original_Data\title.akas.tsv\title.akas.tsv" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="234" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\RIYA\AppData\Local\Temp\Alteryx\Engine_304_e4c3ab856861487ea31bbf1c695d447f_\Engine_304_7f302457ba554fc38a0acc0fb89a7ae0~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="414" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\RIYA\AppData\Local\Temp\Alteryx\Engine_304_e4c3ab856861487ea31bbf1c695d447f_\Engine_304_6b066f697fa14cbc802f4bcdeaf38f6f~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF IsNull([region]) THEN &quot;Unknown&quot; ELSE [region] ENDIF" field="region" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([titleId]) THEN &quot;Unknown&quot; ELSE [titleId] ENDIF" field="titleId" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([ordering]) THEN &quot;-9999&quot; ELSE [ordering] ENDIF" field="ordering" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([title]) THEN &quot;Unknown&quot; ELSE [title] ENDIF" field="title" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([language]) THEN &quot;Unknown&quot; ELSE [language] ENDIF" field="language" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([types]) THEN &quot;Unknown&quot; ELSE [types] ENDIF" field="types" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([attributes]) THEN &quot;Unknown&quot; ELSE [attributes] ENDIF" field="attributes" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF IsNull([isOriginalTitle]) THEN &quot;-9999&quot; ELSE [isOriginalTitle] ENDIF" field="isOriginalTitle" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF EqualStrings([language],&quot;\N&quot;) THEN &quot;Unknown&quot; ELSE [language] ENDIF&#xA;" field="language" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF EqualStrings([region],&quot;\N&quot;) THEN &quot;Unknown&quot; ELSE [region] ENDIF&#xA;" field="region" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF EqualStrings([types],&quot;\N&quot;) THEN &quot;Unknown&quot; ELSE [types] ENDIF&#xA;" field="types" size="254" type="V_WString" enabled="true" />
+            <FormulaField expression="IF EqualStrings([attributes],&quot;\N&quot;) THEN &quot;Unknown&quot; ELSE [attributes] ENDIF&#xA;" field="attributes" size="254" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>region = IF IsNull([region]) THEN "Unknown" ELSE [region] ENDIF
+titleId = IF IsN...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings>
+        <Position x="294" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"titleId","ordering","title","region","language","types","attributes","isOriginalTitle"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">lower</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ordering" selected="True" type="Int32" size="4" />
+            <SelectField field="title" selected="True" size="1000" />
+            <SelectField field="isOriginalTitle" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="510" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\RIYA\AppData\Local\Temp\Alteryx\Engine_304_e4c3ab856861487ea31bbf1c695d447f_\Engine_304_f48d673fcc9340078cc0ba14a069327c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="510" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\RIYA\OneDrive\Desktop\DADA BI\Final_Project\Cleaned_title_akas.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>65001</CodePage>
+            <WriteBOM>True</WriteBOM>
+            <SuppressBlankFile>False</SuppressBlankFile>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Cleaned_title_akas.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="24" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output26" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>title_akas</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4ddbbfcf-fdd6-4d01-8502-f9dd6e78e2f7" />
+      <Telemetry>
+        <PreviousWorkflowId value="f493052c-da40-4ef3-a49a-cb84813550b7" />
+        <OriginWorkflowId value="f493052c-da40-4ef3-a49a-cb84813550b7" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
